@@ -1,30 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zurhaifa | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Biography | Zurhaifa</title>
 
   <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="biography.css">
 </head>
+<body>
 
-<body data-bs-spy="scroll" data-bs-target="#navMenu">
+<!-- NETFLIX INTRO -->
+<div id="intro">
+  <h1>ZURHAIFA</h1>
+</div>
+
+<!-- HOME -->
+<header class="home" id="home">
+  <div class="overlay container">
+    <div class="row align-items-center text-center text-md-start">
+      <div class="col-md-4 mb-4 mb-md-0">
+        <img src="assets/profile.jpg" class="profile-pic" alt="Zurhaifa Profile Picture">
+      </div>
+      <div class="col-md-8">
+        <h1>Zurhaifa</h1>
+        <p>My Life, My Story</p>
+        <a href="#about" class="btn-netflix">▶ Watch Biography</a>
+      </div>
+    </div>
+  </div>
+</header>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-md fixed-top shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">ZURHAIFA </a>
+    <a class="navbar-brand" href="#home">MyBio</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
@@ -32,7 +45,6 @@
 
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
@@ -42,128 +54,158 @@
   </div>
 </nav>
 
-<!-- HOME -->
-<section id="home" class="home-section">
-  <div class="text-center text-white">
-    <h1 class="display-4 fw-bold">Hi, I’m Zurhaifa 💖</h1>
-    <p class="lead">IT Student • Web Dev</p>
-    <a href="#projects" class="btn btn-light btn-lg rounded-pill mt-3">View My Work</a>
+<!-- ABOUT -->
+<section class="section">
+  <div class="container text-center">
+    <h2>About Me</h2>
+    <p class="about-text">
+      I am a Bachelor of Science in Information Technology (BSIT) student who is
+      passionate about web development and technology. I enjoy creating clean,
+      responsive, and user-friendly websites using HTML, CSS, Bootstrap, and JavaScript.
+    </p>
+
+    <p class="about-text">
+      I am continuously improving my skills by building projects, exploring new
+      technologies, and learning best practices in design and development.
+      My goal is to become a skilled IT professional and contribute to meaningful
+      digital solutions in the future.
+    </p>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="py-5">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-5 mb-4">
-        <img src="assets/profile.jpg" class="img-fluid rounded-5 shadow-soft">
-      </div>
-      <div class="col-lg-7">
-        <h2 class="section-title">About Me 🌷</h2>
-        <p class="text-muted">
-          I’m an IT student who loves pastel aesthetics, coquette vibes,
-          and building cute, responsive websites using HTML, CSS,
-          Bootstrap, and JavaScript.
-        </p>
-        <a href="#" class="btn btn-outline-pink rounded-pill">Read More</a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- SKILLS -->
-<section id="skills" class="bg-pastel py-5 text-center">
-  <div class="container">
-    <h2 class="section-title mb-4">My Skills🎀</h2>
+<section id="skills" class="section container">
+  <h2>Skills</h2>
 
-    <div class="row g-4 justify-content-center">
-      <div class="col-md-2">
-        <div class="skill-card">
-          <i class="bi bi-filetype-html"></i>
-          <h6>HTML</h6>
+  <div class="row mt-4">
+
+    <div class="col-md-6 mb-4">
+      <div class="skill-card">
+        <div class="d-flex justify-content-between">
+          <h5>HTML</h5>
+          <span>90%</span>
         </div>
-      </div>
-
-      <div class="col-md-2">
-        <div class="skill-card">
-          <i class="bi bi-filetype-css"></i>
-          <h6>CSS</h6>
-        </div>
-      </div>
-
-      <div class="col-md-2">
-        <div class="skill-card">
-          <i class="bi bi-bootstrap"></i>
-          <h6>Bootstrap</h6>
-        </div>
-      </div>
-
-      <div class="col-md-2">
-        <div class="skill-card">
-          <i class="bi bi-filetype-js"></i>
-          <h6>JavaScript</h6>
+        <div class="progress">
+          <div class="progress-bar skill-html"></div>
         </div>
       </div>
     </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="skill-card">
+        <div class="d-flex justify-content-between">
+          <h5>CSS</h5>
+          <span>85%</span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar skill-css"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="skill-card">
+        <div class="d-flex justify-content-between">
+          <h5>Bootstrap</h5>
+          <span>80%</span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar skill-bootstrap"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="skill-card">
+        <div class="d-flex justify-content-between">
+          <h5>GitHub</h5>
+          <span>75%</span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar skill-github"></div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="py-5">
-  <div class="container text-center">
-    <h2 class="section-title mb-4"> Projects 💻</h2>
+<section id="projects" class="section container">
+  <h2>Projects</h2>
+  <div class="card-netflix">
+    <p>
+      I build responsive websites and academic system projects focused on usability and clean design.
+    </p>
 
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="project-card">
-          <img src="assets/project1.jpg">
-          <div class="p-3">
-            <h5> Website</h5>
-            <p>Responsive website.</p>
-            <a href="#" class="btn btn-pink btn-sm rounded-pill">View</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="project-card">
-          <img src="assets/project1.jpg">
-          <div class="p-3">
-            <h5>To be edited</h5>
-            <p>To be edited.</p>
-            <a href="#" class="btn btn-pink btn-sm rounded-pill">View</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="project-card">
-          <img src="assets/project1.jpg">
-          <div class="p-3">
-            <h5>To be edited</h5>
-            <p>To be edited.</p>
-            <a href="#" class="btn btn-pink btn-sm rounded-pill">View</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <a href="https://github.com/zuuuu-works" target="_blank" class="github-btn">
+      🔗 View My GitHub
+    </a>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact-section text-center py-5">
-  <div class="container">
-    <h2 class="section-title">Let’s Be Cute & Productive 💌</h2>
-    <p><i class="bi bi-envelope-heart"></i> z.kandalayang.546167@umindanao.edu.ph</p>
-    <p><i class="bi bi-phone"></i> +63 916 266 9385</p>
+<section id="contact" class="section container">
+  <h2>Contact</h2>
+  <div class="card-netflix">
+    <p>Email: z.kandalayang.546167@umindanao.edu.ph</p>
+    <p>
+      GitHub:
+      <a href="https://github.com/zuuuu-works" target="_blank" class="text-danger">
+        github.com/zuuuu-works
+      </a>
+    </p>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="text-center py-3">
-  <p class="mb-0">© 2026 Zurhaifa •  Portfolio 🎀</p>
+<!-- INDICATOR -->
+<div class="indicator">
+  🎬 Now Watching:
+  <span id="home-ind">Home</span>
+  <span id="about-ind">About</span>
+  <span id="skills-ind">Skills</span>
+  <span id="projects-ind">Projects</span>
+  <span id="contact-ind">Contact</span>
+</div>
+
+<!-- IMAGE MODAL -->
+<div id="imgModal">
+  <span id="closeModal">&times;</span>
+  <img id="modalImg">
+</div>
+
+<footer>
+  <p>© 2026 Zurhaifa | Netflix Biography Theme</p>
 </footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  window.addEventListener("load", function () {
+    setTimeout(() => {
+      document.getElementById("intro").style.display = "none";
+    }, 2500);
+  });
+
+  const images = document.querySelectorAll(".gallery-img");
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+  const closeModal = document.getElementById("closeModal");
+
+  images.forEach(img => {
+    img.addEventListener("click", function () {
+      modal.style.display = "flex";
+      modalImg.src = this.src;
+    });
+  });
+
+  closeModal.onclick = () => modal.style.display = "none";
+  modal.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  };
+</script>
 
 </body>
 </html>
-

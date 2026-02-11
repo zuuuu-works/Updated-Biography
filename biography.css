@@ -1,0 +1,305 @@
+/* ========================= */
+/* RESET */
+/* ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #141414;
+  color: white;
+}
+
+/* ========================= */
+/* NETFLIX INTRO */
+/* ========================= */
+#intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#intro h1 {
+  color: #e50914;
+  font-size: 4rem;
+  letter-spacing: 6px;
+  animation: zoomIn 2s ease forwards;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ========================= */
+/* HERO SECTION */
+/* ========================= */
+.home {
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), #141414),
+  url("https://images.unsplash.com/photo-1517602302552-471fe67acf66");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* PROFILE IMAGE */
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #e50914;
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.7);
+}
+
+/* BUTTON */
+.btn-netflix {
+  display: inline-block;
+  margin-top: 20px;
+  background: #e50914;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-netflix:hover {
+  background: #f6121d;
+  transform: scale(1.05);
+}
+
+/* ========================= */
+/* SECTIONS */
+/* ========================= */
+.section {
+  padding: 70px 0;
+}
+
+.section h2 {
+  margin-bottom: 25px;
+  color: #e50914;
+  font-weight: bold;
+}
+
+/* CARD STYLE */
+.card-netflix {
+  background: #1f1f1f;
+  padding: 25px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card-netflix:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(229, 9, 20, 0.3);
+}
+
+/* ========================= */
+/* UPDATED SKILLS DESIGN */
+/* ========================= */
+.skill-card {
+  background: rgba(31, 31, 31, 0.95);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(229, 9, 20, 0.4);
+}
+
+.skill-card h5 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.progress {
+  height: 10px;
+  background-color: #333;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #e50914, #ff2e63);
+  border-radius: 20px;
+  animation: loadSkill 2s ease forwards;
+}
+
+.skill-html { width: 90%; }
+.skill-css { width: 85%; }
+.skill-bootstrap { width: 80%; }
+.skill-github { width: 75%; }
+
+@keyframes loadSkill {
+  from { width: 0; }
+}
+
+/* ========================= */
+/* GALLERY */
+/* ========================= */
+.gallery-img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.6);
+}
+
+/* ========================= */
+/* GITHUB BUTTON */
+/* ========================= */
+.github-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: black;
+  border: 2px solid #e50914;
+  color: #e50914;
+  padding: 10px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.github-btn:hover {
+  background: #e50914;
+  color: white;
+}
+
+/* ========================= */
+/* INDICATOR */
+/* ========================= */
+.indicator {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  background: rgba(0,0,0,0.85);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: gray;
+  z-index: 1000;
+}
+
+.indicator span {
+  display: none;
+  color: #e50914;
+}
+
+#home:target ~ .indicator #home-ind,
+#about:target ~ .indicator #about-ind,
+#skills:target ~ .indicator #skills-ind,
+#projects:target ~ .indicator #projects-ind,
+#contact:target ~ .indicator #contact-ind {
+  display: inline;
+}
+
+.indicator #home-ind {
+  display: inline;
+}
+
+/* ========================= */
+/* MODAL */
+/* ========================= */
+#imgModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.95);
+  justify-content: center;
+  align-items: center;
+  z-index: 9998;
+}
+
+#imgModal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+#closeModal {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+  margin-top: 50px;
+}
+
+/* ========================= */
+/* MOBILE OPTIMIZATION */
+/* ========================= */
+@media (max-width: 768px) {
+  .overlay h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .overlay p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+  }
+
+  .indicator {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+  }
+}
